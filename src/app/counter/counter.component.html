@@ -1,0 +1,25 @@
+
+<div style="width : 100%;height: 100%; display: flex; justify-content: center; align-items: center">
+    <div>
+        <button (click)="incrementer ()">Increment</button>
+        <span> {{ count$ | async }} </span>
+        <button (click)="decrementer ()">Decrement</button>
+
+        <div>
+            <button (click)="goToUsers ()">Go to Users page</button>
+        </div>
+
+
+
+        <div>
+            {{
+                (user$ | async)?.username
+            }}
+        </div>
+        <div>
+            <button (click)="setUsers () "> Set user </button>
+        </div>
+    </div>
+
+
+</div>
